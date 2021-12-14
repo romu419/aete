@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>aete-1.html</title>
+<style>
+  main{text-align:center;position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+  .title{margin-top:50px; text-align:center; color: dimgray; font-size: 25px; font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";}
+  .search{margin:30px auto; width:600px; padding:10px 5px;}
+  .serch-box{border:1px solid lightgray; border-radius:20px; box-shadow:1px 1px 1px 1px lightgray; padding:10px;}
+  .text{width:500px; margin-left:20px; border:none; padding: 5px;}
+  .text:focus{outline: none;}
+  .button{padding:6px 25px; margin-right:5px; border-radius:5px; background-color:whitesmoke; font-size:10px; margin-top:50px; margin-bottom: 20px}
+  .description{margin: 0 auto; width:1200px; margin-top: 50px; word-break: break-word;}
+  .howto{margin-bottom: 70px; color: dimgray; font-family: "YuGothic", "Yu Gothic medium", "Hiragino Sans", "Meiryo", "sans-serif"}
+  p{font-size: 13px; color: dimgray;}
+</style>
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+<body>
+ <main>
+  <div class="title">“ あ え て ” こ の 検 索 結 果 を 。</div>
+  <div class="search">
+        <form action="https://www.google.com/search" id="form" method="GET" onsubmit="return check()">
+          <div class="serch-box">
+			<i class="fas fa-search"></i>
+            <input class="text" id="a" type="text" name="q" placeholder="検索ワード" name="text1">
+          </div>
+          <input class="button" type="submit" value="検索" onClick="random()">
+        </form>
+  </div>
+  <div class="description">
+  <div class="howto">- あなたが調べたいことを検索窓に入力して検索ボタンを押すと自動的にワードが追加され、普通とは一味違った検索結果が表示されます -</div>
+  <p>一般的な検索システムは非常に便利で、確かな情報を効率よく調べることができます。<br />
+      しかし、調べたい情報しか入ってこなくなるということは、断片的な情報しか知ることができないということでもあります。</p>
+  <p>もし調べる対象の周辺情報や違う角度からの情報を仕入れることができれば、<br />
+	  視野を広げたり情報との新しい出会いを増やしたりすることができるのではないでしょうか。</p>
+  <p>”あえて”の感性を具備したこの検索システムで、検索者がユニークな視点を取り入れ、<br />
+	  そこから思いもよらない新たな発見に繋がることを願っています。</p>
+  </div>
+<script>
+           
+const a = ["あえて","珍しい","特殊"];
+const text_array = ['大学',"政治"];
+const a_array = ["不祥事", "隠蔽"]
+const random1 = a[Math.floor(Math.random()*a.length)];
+const random2 = a_array[Math.floor(Math.random()*a_array.length)];
+const word = document.getElementById("a");
+let num = 0
+function random(){
+  for (const text of text_array){
+    if (word.value.match(text)){
+      word.value = word.value + " " + random2;
+      break;
+    }else if (word.value === ""){
+      return false;
+      break;
+    }else if (num === text_array.length -1){
+      word.value = word.value + " " + random1;
+      break;
+    }else{
+      num += 1;
+    }
+  };
+ };
+function check(){
+  if (word.value === ""){
+    window.alert("検索ワードを入力してください。");
+    return false;
+  }
+};
+</script>
+</main>
+</body>
+</html>
