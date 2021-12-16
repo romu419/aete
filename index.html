@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <title>aete-1.html</title>
   <style>
-	.title{margin-top:8%; text-align:center; color: dimgray; font-size: 25px; font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho ProN", "serif";}
+    .title{margin-top:50px; text-align:center; color: dimgray; font-size: 25px; font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho ProN", "serif";}
     .search{margin:30px auto; width:600px; padding:10px 5px;}
     .serch-box{border:1px solid lightgray; border-radius:20px; box-shadow:1px 1px 1px 1px lightgray; padding:10px;}
     .text{width:500px; margin-left:20px; border:none; padding: 5px;}
@@ -15,24 +15,21 @@
     .form-button{text-align: center;}
     .button{padding:6px 25px; border-radius:5px; background-color:whitesmoke; font-size:10px; margin-top:50px; margin-bottom: 20px}
     .description{margin: 0 auto; width:100%; margin-top: 50px; word-break: break-word; text-align: center;}
-    .howto1{margin-bottom: 40px; color: dimgray; font-family: "YuGothic", "Yu Gothic medium", "Hiragino Sans", "Meiryo", "sans-serif"}
-	.howto2{margin-bottom: 30px; color: dimgray; font-size:13px; font-family: "YuGothic", "Yu Gothic medium", "Hiragino Sans", "Meiryo", "sans-serif"}
+    .howto{margin-bottom: 30px; color: dimgray; font-family: "YuGothic", "Yu Gothic medium", "Hiragino Sans", "Meiryo", "sans-serif"}
 
-    @media(max-width:750px){
-      .title{margin-top: 50%; text-align:center; color: dimgray; font-size: 12px; font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho ProN", "serif";}
-      .search{margin:50px auto; width: 60%; padding:10px 5px;}
+    @media(max-width:1000px){
+      .title{margin-top: 30%; text-align:center; color: dimgray; font-size: 25px; font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho ProN", "serif";}
+      .search{margin:30px auto; width: 60%; padding:10px 5px;}
       .serch-box{border:1px solid lightgray; border-radius:20px; box-shadow:1px 1px 1px 1px lightgray; padding:10px;}
-      .text{width:60%; margin-left:20px; border:none; padding: 5px;}
+      .text{width:300px; margin-left:20px; border:none; padding: 5px;}
       .text:focus{outline: none;}
       .form-button{text-align: center;}
       .button{padding:6px 25px; margin-right:5px; border-radius:5px; background-color:whitesmoke; font-size:10px; margin-top:50px; margin-bottom: 20px}
       .description{margin: 0 auto; width:100%; margin-top: 50px; word-break: break-word;}
-      .howto1{margin-bottom: 10%; color: dimgray; font-family: "YuGothic", "Yu Gothic medium", "Hiragino Sans", "Meiryo", "sans-serif"; font-size:10px;}
-	  .howto2{margin-bottom: 5%; color: dimgray; font-family: "YuGothic", "Yu Gothic medium", "Hiragino Sans", "Meiryo", "sans-serif"; font-size:8px;}
+      .howto{margin-bottom: 10%; color: dimgray; font-family: "YuGothic", "Yu Gothic medium", "Hiragino Sans", "Meiryo", "sans-serif"; font-size:11px;}
     }
   </style>
   <body>
-   <div class="main">
     <div class="title">“ あ え て ” こ の 検 索 結 果 を 。</div>
     <div class="search">
       <form action="https://www.google.com/search" id="form" method="GET" onsubmit="return check()">
@@ -46,22 +43,21 @@
       </form>
     </div>
     <div class="description">
-      <div class="howto1">
-        <a>- あなたが調べたいことを検索窓に入力して検索ボタンを押すと自動的にワードが追加され、普通とは一味違った検索結果が表示されます -</a>
+      <div class="howto">
+        <a>- あなたが調べたいことを検索窓に入力して検索ボタンを押すと自動的にワードが追加され、普通とは一味違った検索結果が表示されます-</a>
       </div>
-      <div class="howto2">
+      <div class="howto">
         <a>一般的な検索システムは非常に便利で、確かな情報を効率よく調べることができます。<br />
         しかし、調べたい情報しか入ってこなくなるということは、断片的な情報しか知ることができないということでもあります。</a><br />
       </div>
-      <div class="howto2">
+      <div class="howto">
           <a>もし調べる対象の周辺情報や違う角度からの情報を仕入れることができれば、<br />
           視野を広げたり情報との新しい出会いを増やしたりすることができるのではないでしょうか。</a><br />
       </div>
-      <div class="howto2">
+      <div class="howto">
         <a>”あえて”の感性を具備したこの検索システムで、検索者がユニークな視点を取り入れ、<br />
         そこから思いもよらない新たな発見に繋がることを願っています。</a><br />
       </div>
-	</div>
   </body>
 </html>
 
