@@ -58,6 +58,38 @@
         <a>”あえて”の感性を具備したこの検索システムで、検索者がユニークな視点を取り入れ、<br />
         そこから思いもよらない新たな発見に繋がることを願っています。</a><br />
       </div>
+    </div>
+    <script>
+      const a = ["あえて","珍しい","特殊","意外","風変わり","ユニーク","マニアック","変わり種"];
+      const text_array = ['大学',"政治"];
+      const a_array = ["不祥事", "隠蔽"]
+      const random1 = a[Math.floor(Math.random()*a.length)];
+      const random2 = a_array[Math.floor(Math.random()*a_array.length)];
+      const word = document.getElementById("a");
+      let num = 0
+      function random(){
+        for (const text of text_array){
+          if (word.value.match(text)){
+            word.value = word.value + " " + random2;
+            break;
+          }else if (word.value === ""){
+            return false;
+            break;
+          }else if (num === text_array.length -1){
+            word.value = word.value + " " + random1;
+            break;
+          }else{
+            num += 1;
+          }
+        };
+      };
+      function check(){
+        if (word.value === ""){
+          window.alert("検索ワードを入力してください。");
+          return false;
+        }
+      };
+    </script>
   </body>
 </html>
 
